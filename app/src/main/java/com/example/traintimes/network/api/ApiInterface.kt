@@ -1,6 +1,6 @@
-package com.example.traintimes.api
+package com.example.traintimes.network.api
 
-import com.example.traintimes.ModelClass
+import com.example.traintimes.network.model.ModelClass
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

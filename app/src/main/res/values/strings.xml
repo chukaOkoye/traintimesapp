@@ -7,6 +7,8 @@
     <string name="service_operator">Service Operator:</string>
     <string name="currentTime">%s:%s</string>
     <string name="no_trains">NO TRAINS</string>
+    <string name="station_name_error">Incorrect station name</string>
+
 
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.traintimes.api
+package com.example.traintimes.network.api
 
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient

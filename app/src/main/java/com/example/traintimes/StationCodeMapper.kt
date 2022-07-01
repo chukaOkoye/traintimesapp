@@ -1,6 +1,6 @@
 package com.example.traintimes
 
-object StationNameMap {
+object StationCodeMapper {
     val stationCodes: Map<String, String> = mapOf(
         "Abbey Wood"	to	"ABW",
         "Aber"	to	"ABE",

@@ -1,4 +1,4 @@
-package com.example.traintimes
+package com.example.traintimes.view
 
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +7,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.traintimes.api.ApiUtilities
+import com.example.traintimes.Constants
+import com.example.traintimes.R
+import com.example.traintimes.network.api.ApiUtilities
+import com.example.traintimes.network.model.ModelClass
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

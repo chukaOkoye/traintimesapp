@@ -1,4 +1,4 @@
-package com.example.traintimes
+package com.example.traintimes.network.model
 
 import com.google.gson.annotations.SerializedName
 

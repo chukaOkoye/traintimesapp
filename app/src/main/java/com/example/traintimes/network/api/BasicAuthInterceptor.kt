@@ -1,4 +1,4 @@
-package com.example.traintimes.api
+package com.example.traintimes.network.api
 
 import okhttp3.Credentials
 import okhttp3.Interceptor
