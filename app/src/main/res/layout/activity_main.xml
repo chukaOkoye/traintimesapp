@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="50dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Train Times"
+        android:textSize="25sp"
+        android:paddingTop="20dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="From:"
+        android:paddingTop="70dp"
+        android:paddingLeft="25dp"
+        android:textSize="25sp"
+        />
+
+    <AutoCompleteTextView
+        android:id="@+id/fromStation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e.g. VIC"
+        android:inputType="textCapWords"
+        android:textColor="#363A43"
+        android:textColorHint="#7A8089"
+        android:paddingLeft="20sp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To:"
+        android:layout_marginTop="30dp"
+        android:paddingStart="25dp"
+        android:textSize="25sp"
+        />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/toStation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e.g. BTN"
+        android:inputType="textCapWords"
+        android:textColor="#363A43"
+        android:textColorHint="#7A8089"
+        android:paddingLeft="20sp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        />
+
+    <Button
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_marginTop="25sp"
+        />
+    
+</LinearLayout>

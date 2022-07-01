@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">TrainTimes</string>
+    <string name="time">Time:</string>
+    <string name="platform">Platform:</string>
+    <string name="from">From:</string>
+    <string name="destination">Destination:</string>
+    <string name="service_operator">Service Operator:</string>
+    <string name="currentTime">%s:%s</string>
+    <string name="no_trains">NO TRAINS</string>
+
+
+</resources>
