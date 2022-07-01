@@ -1,7 +1,7 @@
 package com.example.traintimes
 
 object StationNameMap {
-    val stationCodes = mapOf(
+    val stationCodes: Map<String, String> = mapOf(
         "Abbey Wood"	to	"ABW",
         "Aber"	to	"ABE",
         "Abercynon"	to	"ACY",
@@ -2581,6 +2581,5 @@ object StationNameMap {
         "Yorton"	to	"YRT",
         "Ystrad Mynach"	to	"YSM",
         "Ystrad Rhondda"	to	"YSR"
-    ).mapKeys { it.key.uppercase() }
-
+    )
 }

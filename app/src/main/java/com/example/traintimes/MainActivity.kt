@@ -21,10 +21,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        val fromStation : AutoCompleteTextView = binding?.fromStation!!
+        var fromStation : AutoCompleteTextView = binding?.fromStation!!
         val toStation: AutoCompleteTextView = binding?.toStation!!
 
-        var json : String? = null
+        val json: String?
 
         try {
             val inputStream: InputStream = assets.open("stations.json")
@@ -42,17 +42,12 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
-
-
         binding?.searchBox?.setOnClickListener {
             val intent = Intent(this, DisplayTimesActivity::class.java)
-
-            intent.putExtra(Constants.FROM_STATION, fromStation.text.toString())
-            intent.putExtra(Constants.TO_STATION, toStation.text.toString())
+            intent.putExtra(Constants.FROM_STATION, mapToStationCode(fromStation.text.toString()))
+            intent.putExtra(Constants.TO_STATION, mapToStationCode(toStation.text.toString()))
             startActivity(intent)
         }
-
 
     }
 
@@ -61,13 +56,10 @@ class MainActivity : AppCompatActivity() {
         binding = null
     }
 
-    fun mapToStationCode(name: String): String? {
+    private fun mapToStationCode(name: String): String {
 
-        if (StationNameMap.stationCodes.containsKey(name.uppercase())){
-            return StationNameMap.stationCodes[name.uppercase()]
-        } else {
-            return "Enter valid station"
-        }
+        return StationNameMap.stationCodes[name]?: name
+
     }
 
 }
