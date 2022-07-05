@@ -26,7 +26,9 @@ class MainActivity : AppCompatActivity() {
         val fromStation : AutoCompleteTextView = binding?.fromStation!!
         val toStation: AutoCompleteTextView = binding?.toStation!!
 
-        val parsedStations = viewModel.getLocalJsonForAutocomplete(assets.open("stations.json"))
+        val localJson = assets.open("stations.json")
+        val parsedJson = localJson.bufferedReader().use { it.readText() }
+        val parsedStations = viewModel.getLocalJsonForAutocomplete(parsedJson)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, parsedStations?.stations.orEmpty())
         binding!!.fromStation.setAdapter(adapter)
