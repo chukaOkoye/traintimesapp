@@ -9,6 +9,7 @@ import java.io.IOException
 
 class MainActivityViewModel : ViewModel() {
 
+    // Returns local Model of station JSON list
     fun getLocalJsonForAutocomplete(json: String) : LocalStationModel? {
         try {
             val gson = GsonBuilder().create()
@@ -19,6 +20,7 @@ class MainActivityViewModel : ViewModel() {
         return null
     }
 
+    // Returns CRS code of each station name when called
     fun mapToStationCode(stationName: String): String? {
         return StationCodeMapper.stationCodes[stationName]
     }

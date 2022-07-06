@@ -23,11 +23,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding?.root)
         viewModel = MainActivityViewModel()
 
+        // Target EditText layouts via id
         val fromStation : AutoCompleteTextView = binding?.fromStation!!
         val toStation: AutoCompleteTextView = binding?.toStation!!
 
 
-        // Access local JSON of station list
+        // Access local JSON of station list via viewModel
         val localJson = assets.open("stations.json")
         val parsedJson = localJson.bufferedReader().use { it.readText() }
         val parsedStations = viewModel.getLocalJsonForAutocomplete(parsedJson)
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         binding!!.fromStation.setAdapter(adapter)
         binding!!.toStation.setAdapter(adapter)
 
-        // Onclick listener when search box is clicked binds station name to code
+        // Onclick listener when search box is clicked binds station name to CRS code
         binding?.searchBox?.setOnClickListener {
 
             val fromStationCode = viewModel.mapToStationCode(fromStation.text.toString())
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                 fromStation.error = getString(R.string.station_name_error)
                 toStation.error = getString(R.string.station_name_error)
             } else {
+                // Runs DisplayTimesActivity if fields are correct
                 val intent = Intent(this, DisplayTimesActivity::class.java)
                 intent.putExtra(Constants.FROM_STATION, fromStationCode)
                 intent.putExtra(Constants.TO_STATION, toStationCode)

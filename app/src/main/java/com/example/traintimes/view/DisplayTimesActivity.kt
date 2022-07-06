@@ -22,6 +22,7 @@ class DisplayTimesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_display_times)
         setSupportActionBar(findViewById(R.id.back_toolbar))
 
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val backToolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.back_toolbar)
@@ -33,11 +34,13 @@ class DisplayTimesActivity : AppCompatActivity() {
         val from: String = intent.getStringExtra(Constants.FROM_STATION).toString()
         val to: String = intent.getStringExtra(Constants.TO_STATION).toString()
 
+        // Run method to fetch train times from API with converted CRS input as parameters
         fetchTrainTimes(from, to)
     }
 
     private fun fetchTrainTimes(station: String, toStation: String){
 
+        // Calls Retrofit API methods and BasicAuth interceptors to make call to Realtime Trains API
         ApiUtilities.getApiInterface()?.getTrainTimesData(station, toStation)?.enqueue(object :
             Callback<ModelClass> {
             override fun onResponse(call: Call<ModelClass>, response: Response<ModelClass>) {
@@ -63,12 +66,14 @@ class DisplayTimesActivity : AppCompatActivity() {
 
     private fun setDataOnViews(body: ModelClass?) {
 
+        // Targets Display Times layout id's
         val editableTime = findViewById<TextView>(R.id.editable_time)
         val editablePlatform = findViewById<TextView>(R.id.editable_platform)
         val editableFrom = findViewById<TextView>(R.id.editable_from)
         val editableTo = findViewById<TextView>(R.id.editable_destination)
         val serviceOperator = findViewById<TextView>(R.id.editable_serviceOperator)
 
+        // Display change if JSON response returns null due to strikes or lack of service
         if(body?.services == null){
             findViewById<LinearLayout>(R.id.error_view).visibility = View.VISIBLE
             findViewById<LinearLayout>(R.id.train_info).visibility = View.GONE
