@@ -78,9 +78,19 @@ class DisplayTimesActivity : AppCompatActivity() {
             findViewById<LinearLayout>(R.id.error_view).visibility = View.VISIBLE
             findViewById<LinearLayout>(R.id.train_info).visibility = View.GONE
         } else {
-            val currentTime = body.services!![0].locationDetail.gbttBookedDeparture
-            val hour = currentTime.substring(0, 2)
-            val minutes = currentTime.substring(2, 4)
+            val currentTime1 = body.services!![0].locationDetail.gbttBookedDeparture
+            val currentTime2 = body.services!![1].locationDetail.gbttBookedDeparture
+            val currentTime3 = body.services!![2].locationDetail.gbttBookedDeparture
+            val currentTime4 = body.services!![3].locationDetail.gbttBookedDeparture
+            val currentTime5 = body.services!![4].locationDetail.gbttBookedDeparture
+
+
+
+
+
+
+            val hour = currentTime1.substring(0, 2)
+            val minutes = currentTime1.substring(2, 4)
             editableTime.text = getString(R.string.currentTime, hour, minutes)
             editablePlatform.text = body.services!![0].locationDetail.platform
             editableFrom.text = body.services!![0].locationDetail.description

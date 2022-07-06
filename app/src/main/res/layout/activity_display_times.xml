@@ -24,6 +24,66 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Trains from:"
+        android:textSize="25sp"
+        android:paddingTop="20dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/editable_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_weight="3"
+            android:text="VICTORIA"
+            android:textAlignment="center"
+            tools:ignore="MissingConstraints" />
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_weight="3"
+            android:textAlignment="center"
+            android:text="To"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/editable_destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_weight="3"
+            android:text="EBOURNE"
+            android:textAlignment="center"
+            tools:ignore="MissingConstraints" />
+
+
+    </LinearLayout>
+
+
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,6 +100,7 @@
             android:textSize="22sp"
             android:textStyle="bold"
             android:text="@string/time"
+            android:textAlignment="center"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -52,6 +113,7 @@
             android:textSize="22sp"
             android:textStyle="bold"
             android:text="10:40"
+
             tools:ignore="MissingConstraints"
             tools:text="10:20"/>
 
@@ -73,6 +135,7 @@
             android:textStyle="bold"
             android:layout_weight="3"
             android:text="@string/platform"
+            android:textAlignment="center"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -90,71 +153,6 @@
 
     </LinearLayout>
 
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/from"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:textColor="@android:color/black"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_weight="3"
-            android:text="@string/from"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:id="@+id/editable_from"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:textColor="@android:color/black"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_weight="3"
-            android:text="VICTORIA"
-            tools:ignore="MissingConstraints" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/destination"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:textColor="@android:color/black"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_weight="3"
-            android:text="@string/destination"
-            tools:ignore="MissingConstraints" />
-        <TextView
-            android:id="@+id/editable_destination"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:textColor="@android:color/black"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_weight="3"
-            android:text="EBOURNE"
-            tools:ignore="MissingConstraints" />
-
-    </LinearLayout>
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -170,6 +168,7 @@
             android:layout_weight="3"
             android:textStyle="bold"
             android:text="@string/service_operator"
+            android:textAlignment="center"
             tools:ignore="MissingConstraints" />
 
         <TextView
