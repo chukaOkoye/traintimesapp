@@ -94,7 +94,6 @@ class DisplayTimesActivity : AppCompatActivity() {
             // val currentTime4 = body.services!![3].locationDetail.gbttBookedDeparture
             // val currentTime5 = body.services!![4].locationDetail.gbttBookedDeparture
 
-
             // 1st train time
             val hour = currentTime1.substring(0, 2)
             val minutes = currentTime1.substring(2, 4)
