@@ -9,6 +9,7 @@ Many thanks to (in no particular order):
 - Jose Fernandez
 - Marcin Lament
 - Bryen Louis Viera Commins
+- Alex Pallister
 
 ## Technologies used
 

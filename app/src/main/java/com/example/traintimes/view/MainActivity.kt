@@ -26,14 +26,18 @@ class MainActivity : AppCompatActivity() {
         val fromStation : AutoCompleteTextView = binding?.fromStation!!
         val toStation: AutoCompleteTextView = binding?.toStation!!
 
+
+        // Access local JSON of station list
         val localJson = assets.open("stations.json")
         val parsedJson = localJson.bufferedReader().use { it.readText() }
         val parsedStations = viewModel.getLocalJsonForAutocomplete(parsedJson)
 
+        // Apply local JSON station lists to Autocomplete fields
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, parsedStations?.stations.orEmpty())
         binding!!.fromStation.setAdapter(adapter)
         binding!!.toStation.setAdapter(adapter)
 
+        // Onclick listener when search box is clicked binds station name to code
         binding?.searchBox?.setOnClickListener {
 
             val fromStationCode = viewModel.mapToStationCode(fromStation.text.toString())

@@ -25,3 +25,4 @@ class MainActivityViewModel : ViewModel() {
 }
 
 // One input for tests, two potential outputs (either valid or null)
+// Another test mapToStationCode for valid and null
