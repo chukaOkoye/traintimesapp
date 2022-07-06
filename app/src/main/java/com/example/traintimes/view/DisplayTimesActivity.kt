@@ -66,12 +66,22 @@ class DisplayTimesActivity : AppCompatActivity() {
 
     private fun setDataOnViews(body: ModelClass?) {
 
-        // Targets Display Times layout id's
+        // Targets Display Times layout 1st section id's
         val editableTime = findViewById<TextView>(R.id.editable_time)
         val editablePlatform = findViewById<TextView>(R.id.editable_platform)
         val editableFrom = findViewById<TextView>(R.id.editable_from)
         val editableTo = findViewById<TextView>(R.id.editable_destination)
         val serviceOperator = findViewById<TextView>(R.id.editable_serviceOperator)
+
+        // Targets 2nd section id's
+        val editableTime2 = findViewById<TextView>(R.id.editable_time2)
+        val editablePlatform2 = findViewById<TextView>(R.id.editable_platform2)
+        val serviceOperator2 = findViewById<TextView>(R.id.editable_serviceOperator2)
+
+        // Targets 3rd section id's
+        val editableTime3 = findViewById<TextView>(R.id.editable_time3)
+        val editablePlatform3 = findViewById<TextView>(R.id.editable_platform3)
+        val serviceOperator3 = findViewById<TextView>(R.id.editable_serviceOperator3)
 
         // Display change if JSON response returns null due to strikes or lack of service
         if(body?.services == null){
@@ -81,14 +91,11 @@ class DisplayTimesActivity : AppCompatActivity() {
             val currentTime1 = body.services!![0].locationDetail.gbttBookedDeparture
             val currentTime2 = body.services!![1].locationDetail.gbttBookedDeparture
             val currentTime3 = body.services!![2].locationDetail.gbttBookedDeparture
-            val currentTime4 = body.services!![3].locationDetail.gbttBookedDeparture
-            val currentTime5 = body.services!![4].locationDetail.gbttBookedDeparture
+            // val currentTime4 = body.services!![3].locationDetail.gbttBookedDeparture
+            // val currentTime5 = body.services!![4].locationDetail.gbttBookedDeparture
 
 
-
-
-
-
+            // 1st train time
             val hour = currentTime1.substring(0, 2)
             val minutes = currentTime1.substring(2, 4)
             editableTime.text = getString(R.string.currentTime, hour, minutes)
@@ -96,6 +103,21 @@ class DisplayTimesActivity : AppCompatActivity() {
             editableFrom.text = body.services!![0].locationDetail.description
             editableTo.text = body.services!![0].locationDetail.destination[0].description
             serviceOperator.text = body.services!![0].atocName
+
+            // 2nd train time
+            val hour2 = currentTime2.substring(0, 2)
+            val minutes2 = currentTime2.substring(2, 4)
+            editableTime2.text = getString(R.string.currentTime2, hour2, minutes2)
+            editablePlatform2.text = body.services!![1].locationDetail.platform
+            serviceOperator2.text = body.services!![1].atocName
+
+            // 3rd train time
+            val hour3 = currentTime3.substring(0, 2)
+            val minutes3 = currentTime3.substring(2, 4)
+            editableTime3.text = getString(R.string.currentTime3, hour3, minutes3)
+            editablePlatform3.text = body.services!![2].locationDetail.platform
+            serviceOperator3.text = body.services!![2].atocName
+
         }
 
     }
