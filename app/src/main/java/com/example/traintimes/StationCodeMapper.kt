@@ -1,6 +1,7 @@
 package com.example.traintimes
 
 object StationCodeMapper {
+    // List of 2777 train stations
     val stationCodes: Map<String, String> = mapOf(
         "Abbey Wood"	to	"ABW",
         "Aber"	to	"ABE",
