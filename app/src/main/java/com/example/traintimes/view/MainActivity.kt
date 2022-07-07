@@ -44,8 +44,9 @@ class MainActivity : AppCompatActivity() {
             val fromStationCode = viewModel.mapToStationCode(fromStation.text.toString())
             val toStationCode = viewModel.mapToStationCode(toStation.text.toString())
 
-            if (fromStationCode == null || toStationCode == null){
+            if (fromStationCode == null){
                 fromStation.error = getString(R.string.station_name_error)
+            } else if (toStationCode == null){
                 toStation.error = getString(R.string.station_name_error)
             } else {
                 // Runs DisplayTimesActivity if fields are correct
