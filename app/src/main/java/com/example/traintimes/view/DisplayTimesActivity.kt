@@ -83,7 +83,7 @@ class DisplayTimesActivity : AppCompatActivity() {
         val editablePlatform3 = findViewById<TextView>(R.id.editable_platform3)
         val serviceOperator3 = findViewById<TextView>(R.id.editable_serviceOperator3)
 
-        // Display change if JSON response returns null due to strikes or lack of service
+        // Display change if JSON response returns null due to train strikes or lack of service
         if(body?.services == null){
             findViewById<LinearLayout>(R.id.error_view).visibility = View.VISIBLE
             findViewById<LinearLayout>(R.id.train_info).visibility = View.GONE
