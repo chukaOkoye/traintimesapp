@@ -8,8 +8,9 @@
     <string name="currentTime">%s:%s</string>
     <string name="no_trains">NO TRAINS</string>
     <string name="station_name_error">Incorrect station name</string>
-    <string name="currentTime2" tools:ignore="DuplicateDefinition">%s:%s</string>
-    <string name="currentTime3" tools:ignore="DuplicateDefinition">%s:%s</string>
+<!--    <string name="currentTime2" tools:ignore="DuplicateDefinition">%s:%s</string>-->
+<!--    <string name="currentTime3" tools:ignore="DuplicateDefinition">%s:%s</string>-->
+<!--    <string name="currentTime4" tools:ignore="DuplicateDefinition">%s:%s</string>-->
     <string name="trains_from">Trains from:</string>
     <string name="victoria">VICTORIA</string>
     <string name="to">To</string>

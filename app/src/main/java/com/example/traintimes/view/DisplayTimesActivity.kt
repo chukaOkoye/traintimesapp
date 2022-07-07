@@ -83,6 +83,10 @@ class DisplayTimesActivity : AppCompatActivity() {
         val editablePlatform3 = findViewById<TextView>(R.id.editable_platform3)
         val serviceOperator3 = findViewById<TextView>(R.id.editable_serviceOperator3)
 
+        val editableTime4 = findViewById<TextView>(R.id.editable_time4)
+        val editablePlatform4 = findViewById<TextView>(R.id.editable_platform4)
+        val serviceOperator4 = findViewById<TextView>(R.id.editable_serviceOperator4)
+
         // Display change if JSON response returns null due to train strikes or lack of service
         if(body?.services == null){
             findViewById<LinearLayout>(R.id.error_view).visibility = View.VISIBLE
@@ -91,6 +95,7 @@ class DisplayTimesActivity : AppCompatActivity() {
             val currentTime1 = body.services!![0].locationDetail.gbttBookedDeparture
             val currentTime2 = body.services!![1].locationDetail.gbttBookedDeparture
             val currentTime3 = body.services!![2].locationDetail.gbttBookedDeparture
+            val currentTime4 = body.services!![3].locationDetail.gbttBookedDeparture
 
             // 1st train time
             val hour = currentTime1.substring(0, 2)
@@ -104,16 +109,22 @@ class DisplayTimesActivity : AppCompatActivity() {
             // 2nd train time
             val hour2 = currentTime2.substring(0, 2)
             val minutes2 = currentTime2.substring(2, 4)
-            editableTime2.text = getString(R.string.currentTime2, hour2, minutes2)
+            editableTime2.text = getString(R.string.currentTime, hour2, minutes2)
             editablePlatform2.text = body.services!![1].locationDetail.platform
             serviceOperator2.text = body.services!![1].atocName
 
             // 3rd train time
             val hour3 = currentTime3.substring(0, 2)
             val minutes3 = currentTime3.substring(2, 4)
-            editableTime3.text = getString(R.string.currentTime3, hour3, minutes3)
+            editableTime3.text = getString(R.string.currentTime, hour3, minutes3)
             editablePlatform3.text = body.services!![2].locationDetail.platform
             serviceOperator3.text = body.services!![2].atocName
+
+            val hour4 = currentTime4.substring(0, 2)
+            val minutes4 = currentTime4.substring(2, 4)
+            editableTime4.text = getString(R.string.currentTime, hour4, minutes4)
+            editablePlatform4.text = body.services!![3].locationDetail.platform
+            serviceOperator4.text = body.services!![3].atocName
 
         }
 

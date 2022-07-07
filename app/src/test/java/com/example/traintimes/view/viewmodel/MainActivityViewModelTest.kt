@@ -42,9 +42,8 @@ class MainActivityViewModelTest {
     @Test
     fun `given invalid station, return null`(){
         val expected = viewModel.mapToStationCode("London")
-        val actual = null
 
-        assertEquals(expected, actual)
+        assertNull(expected)
     }
 
     private val validMockJson = """
