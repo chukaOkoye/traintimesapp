@@ -31,6 +31,14 @@ class MainActivityViewModelTest {
         assertNull(actual?.stations)
     }
 
+    @Test
+    fun `given station name, return correct CRS code`(){
+        val expected = viewModel.mapToStationCode("London Victoria")
+        val actual = ("VIC")
+
+        assertEquals(expected, actual)
+    }
+
     private val validMockJson = """
       {
         "stations": 
