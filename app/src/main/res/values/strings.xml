@@ -13,7 +13,7 @@
 <!--    <string name="currentTime4" tools:ignore="DuplicateDefinition">%s:%s</string>-->
     <string name="trains_from">Trains from:</string>
     <string name="victoria">VICTORIA</string>
-    <string name="to">To</string>
+    <string name="to">to</string>
     <string name="ebourne">EBOURNE</string>
     <string name="_10_40">10:40</string>
     <string name="_2">2</string>

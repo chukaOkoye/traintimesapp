@@ -104,7 +104,7 @@ class DisplayTimesActivity : AppCompatActivity() {
             editableTime.text = getString(R.string.currentTime, hour, minutes)
             editablePlatform.text = body.services!![0].locationDetail.platform
             editableFrom.text = body.services!![0].locationDetail.description
-            editableTo.text = body.services!![0].locationDetail.destination[0].description
+            editableTo.text = body.filter.destination.name
             serviceOperator.text = body.services!![0].atocName
 
             // 2nd train time
