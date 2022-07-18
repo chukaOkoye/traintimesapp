@@ -83,6 +83,7 @@ class DisplayTimesActivity : AppCompatActivity() {
         val editablePlatform3 = findViewById<TextView>(R.id.editable_platform3)
         val serviceOperator3 = findViewById<TextView>(R.id.editable_serviceOperator3)
 
+        // Targets 4th section id's
         val editableTime4 = findViewById<TextView>(R.id.editable_time4)
         val editablePlatform4 = findViewById<TextView>(R.id.editable_platform4)
         val serviceOperator4 = findViewById<TextView>(R.id.editable_serviceOperator4)
