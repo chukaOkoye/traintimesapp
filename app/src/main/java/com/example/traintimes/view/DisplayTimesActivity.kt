@@ -120,6 +120,7 @@ class DisplayTimesActivity : AppCompatActivity() {
             editablePlatform3.text = body.services!![2].locationDetail.platform
             serviceOperator3.text = body.services!![2].atocName
 
+            // 4th train time
             val hour4 = currentTime4.substring(0, 2)
             val minutes4 = currentTime4.substring(2, 4)
             editableTime4.text = getString(R.string.currentTime, hour4, minutes4)
