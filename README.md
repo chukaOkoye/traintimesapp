@@ -1,6 +1,15 @@
 # Train Times Android App
 
-Many thanks to (in no particular order):
+## Technologies used
+
+- Retrofit
+- GSON Builder
+- Excel
+- Kotlin
+- Realtimes Trains API
+- XML
+
+## Many thanks to (in no particular order):
 
 - Ben Shapiro
 - Aneta Kowalczyk
@@ -10,12 +19,3 @@ Many thanks to (in no particular order):
 - Marcin Lament
 - Bryen Louis Viera Commins
 - Alex Pallister
-
-## Technologies used
-
-- Retrofit
-- GSON Builder
-- Excel
-- Kotlin
-- Realtimes Trains API
-- XML
