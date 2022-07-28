@@ -7,14 +7,14 @@
 - Utilises the Realtimes Trains API that returns a JSON response of times using the station CRS (Computer Reservation System) code as input, so I created a function that converts the station name string in the first activity to the respective CRS code, which is sent to the API and the second activity displays the result.
 
 ## Wireframe
-[Imgur](https://i.imgur.com/oVhPaGhl.png)
+![Imgur](https://i.imgur.com/oVhPaGhl.png)
 
 ## Screenshots
-First Activity
+- First Activity
 ![Imgur](https://i.imgur.com/Isx8A2vl.png)
 
-Second Activity
-[Imgur](https://i.imgur.com/tuyuchpl.png)
+- Second Activity
+![Imgur](https://i.imgur.com/tuyuchpl.png)
 
 ## Technologies used
 - Retrofit
