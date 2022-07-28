@@ -11,7 +11,7 @@
 
 ## Screenshots
 First Activity
-![Imgur](https://i.imgur.com/Isx8A2v.png)
+![Imgur](https://i.imgur.com/Isx8A2vm.png)
 
 Second Activity
 ![Imgur](https://i.imgur.com/tuyuchp.png)
