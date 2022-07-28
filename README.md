@@ -10,10 +10,12 @@
 ![Imgur](https://i.imgur.com/oVhPaGhl.png)
 
 ## Screenshots
-- First Activity
+First Activity
+
 ![Imgur](https://i.imgur.com/Isx8A2vl.png)
 
-- Second Activity
+Second Activity
+
 ![Imgur](https://i.imgur.com/tuyuchpl.png)
 
 ## Technologies used
