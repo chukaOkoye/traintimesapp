@@ -345,7 +345,7 @@ object StationCodeMapper {
         "Brierfield"	to	"BRF",
         "Brigg"	to	"BGG",
         "Brighouse"	to	"BGH",
-        "Brighton (East Sussex)"	to	"BTN",
+        "Brighton"	to	"BTN",
         "Brimsdown"	to	"BMD",
         "Brinnington"	to	"BNT",
         "Bristol Parkway"	to	"BPW",
