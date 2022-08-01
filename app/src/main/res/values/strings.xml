@@ -19,7 +19,7 @@
     <string name="_2">2</string>
     <string name="southern">Southern</string>
     <string name="eclipses">***</string>
-    <string name="no_trains_available">NO TRAINS AVAILABLE</string>
+    <string name="no_trains_available">NO TRAIN TIMES AVAILABLE</string>
 
 
 </resources>
