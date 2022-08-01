@@ -1,8 +1,5 @@
 package com.example.traintimes.view
 
-// import android.widget.EditText
-// import android.widget.TextView
-
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
