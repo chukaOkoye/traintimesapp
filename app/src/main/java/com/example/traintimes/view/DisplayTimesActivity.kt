@@ -25,6 +25,7 @@ class DisplayTimesActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        // Back navigation toolbar at top
         val backToolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.back_toolbar)
         backToolbar.setNavigationOnClickListener {
             onBackPressed()
