@@ -39,9 +39,8 @@ class DisplayTimesActivity : AppCompatActivity() {
         fetchTrainTimes(from, to)
     }
 
+    // Calls Retrofit API methods and BasicAuth interceptors to make call to Realtime Trains API
     private fun fetchTrainTimes(station: String, toStation: String){
-
-        // Calls Retrofit API methods and BasicAuth interceptors to make call to Realtime Trains API
         ApiUtilities.getApiInterface()?.getTrainTimesData(station, toStation)?.enqueue(object :
             Callback<ModelClass> {
             override fun onResponse(call: Call<ModelClass>, response: Response<ModelClass>) {

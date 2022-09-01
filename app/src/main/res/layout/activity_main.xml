@@ -70,5 +70,10 @@
         android:text="Search"
         android:layout_marginTop="25sp"
         />
-    
+
+    <fragment
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </LinearLayout>
