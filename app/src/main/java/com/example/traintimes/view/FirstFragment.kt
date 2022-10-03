@@ -14,7 +14,7 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [FirstFragment.newInstance] factory method to
+ * Use the [FirstFragment.newInstancke] factory method to
  * create an instance of this fragment.
  */
 class FirstFragment : Fragment() {
