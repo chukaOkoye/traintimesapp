@@ -71,7 +71,8 @@
         android:layout_marginTop="25sp"
         />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
+        android:name="com.example.traintimes.view.FirstFragment"
         android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
