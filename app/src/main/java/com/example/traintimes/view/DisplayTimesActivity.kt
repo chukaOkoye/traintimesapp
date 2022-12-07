@@ -65,7 +65,7 @@ class DisplayTimesActivity : AppCompatActivity() {
         })
     }
 
-    private fun setDataOnViews(body: ModelClass?) {
+    fun setDataOnViews(body: ModelClass?) {
 
         // Targets Display Times layout 1st section id's
         val editableTime = findViewById<TextView>(R.id.editable_time)
@@ -94,7 +94,8 @@ class DisplayTimesActivity : AppCompatActivity() {
             findViewById<LinearLayout>(R.id.error_view).visibility = View.VISIBLE
             findViewById<LinearLayout>(R.id.train_info).visibility = View.GONE
         } else {
-            val currentTime1 = body.services!![0].locationDetail.gbttBookedDeparture
+            val currentTime1 = body.services!![0].
+            locationDetail.gbttBookedDeparture
             val currentTime2 = body.services!![1].locationDetail.gbttBookedDeparture
             val currentTime3 = body.services!![2].locationDetail.gbttBookedDeparture
             val currentTime4 = body.services!![3].locationDetail.gbttBookedDeparture
